@@ -33,15 +33,20 @@
   }
   .logo span { color: #00b4ff; }
 
-  .nav-back {
+  .nav-links {
+    display: flex;
+    gap: 24px;
     font-size: 0.85rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
+  }
+
+  .nav-links a {
     color: rgba(255,255,255,0.75);
     text-decoration: none;
     transition: color 0.25s ease;
   }
-  .nav-back:hover { color: #00b4ff; }
+  .nav-links a:hover { color: #00b4ff; }
 
   .header {
     text-align: center;
@@ -114,10 +119,7 @@
     box-shadow: 0 30px 80px rgba(0, 180, 255, 0.25);
   }
 
-  .card-img-wrap {
-    position: relative;
-    overflow: hidden;
-  }
+  .card-img-wrap { position: relative; overflow: hidden; }
 
   .card img {
     width: 100%;
@@ -156,9 +158,7 @@
     font-weight: 600;
   }
 
-  .card-body {
-    padding: 22px 24px 26px;
-  }
+  .card-body { padding: 22px 24px 26px; }
 
   .card-body h3 {
     font-family: 'Playfair Display', serif;
@@ -189,6 +189,7 @@
     color: rgba(255,255,255,0.55);
     padding-top: 16px;
     border-top: 1px solid rgba(255,255,255,0.08);
+    flex-wrap: wrap;
   }
 
   .card-meta span::before {
@@ -249,7 +250,10 @@
 
 <nav class="nav">
   <div class="logo">Argaw<span>.</span>Auto</div>
-  <a href="index.html" class="nav-back">← Home</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="mailto:aargaw@uw.edu">Contact</a>
+  </div>
 </nav>
 
 <header class="header">
@@ -259,19 +263,20 @@
 </header>
 
 <section class="gallery">
+
   <div class="card">
     <div class="card-img-wrap">
-      <img src="image.png" alt="Featured vehicle" />
+      <img src="image.png" alt="Black luxury sedan" />
       <div class="card-tag">Just Listed</div>
-      <div class="card-price">Inquire</div>
+      <div class="card-price">$42,500</div>
     </div>
     <div class="card-body">
-      <h3>Night Drive Edition</h3>
-      <div class="sub">Luxury Sport Sedan</div>
-      <p>A clean-title showpiece with low miles and a documented service history. Performance and presence in one package.</p>
+      <h3>Onyx Executive</h3>
+      <div class="sub">Black Luxury Sedan · 38k miles</div>
+      <p>A clean-title flagship sedan with low miles, full service records, and premium interior trim. Performance and presence in one package.</p>
       <div class="card-meta">
-        <span>Verified</span>
         <span>Clean Carfax</span>
+        <span>1-Owner</span>
         <span>Inspected</span>
       </div>
     </div>
@@ -279,17 +284,17 @@
 
   <div class="card">
     <div class="card-img-wrap">
-      <img src="image.png" alt="Featured vehicle" />
-      <div class="card-tag">Trending</div>
-      <div class="card-price">Inquire</div>
+      <img src="image2.png" alt="White luxury SUV" />
+      <div class="card-tag">Family Favorite</div>
+      <div class="card-price">$48,900</div>
     </div>
     <div class="card-body">
-      <h3>Executive Class</h3>
-      <div class="sub">Premium Luxury Coupe</div>
-      <p>Hand-selected for refined performance and reliability. Recently serviced and reconditioned to showroom standards.</p>
+      <h3>Glacier SUV</h3>
+      <div class="sub">White Luxury SUV · 41k miles</div>
+      <p>Spacious, refined, and built for Pacific Northwest weather. Heated seats, panoramic roof, and a recent multi-point service.</p>
       <div class="card-meta">
-        <span>Verified</span>
-        <span>1-Owner</span>
+        <span>AWD</span>
+        <span>Clean Title</span>
         <span>Warranty Eligible</span>
       </div>
     </div>
@@ -297,21 +302,22 @@
 
   <div class="card">
     <div class="card-img-wrap">
-      <img src="image.png" alt="Featured vehicle" />
-      <div class="card-tag">Certified</div>
-      <div class="card-price">Inquire</div>
+      <img src="image3.png" alt="Silver luxury coupe" />
+      <div class="card-tag">Driver's Choice</div>
+      <div class="card-price">$36,750</div>
     </div>
     <div class="card-body">
-      <h3>Daily Driver Select</h3>
-      <div class="sub">Reliable Pre-Owned</div>
-      <p>A reliable everyday option with strong fundamentals. Inspected end-to-end and priced to move quickly.</p>
+      <h3>Silver Wave Coupe</h3>
+      <div class="sub">Silver Luxury Coupe · 52k miles</div>
+      <p>A sharp-handling coupe with sport-tuned suspension and a recent set of premium tires. Daily-driver comfort with weekend personality.</p>
       <div class="card-meta">
-        <span>Verified</span>
-        <span>Multi-Point Inspection</span>
+        <span>Sport Pkg</span>
+        <span>Inspected</span>
         <span>Financing Available</span>
       </div>
     </div>
   </div>
+
 </section>
 
 <div class="nav-back-wrap">
